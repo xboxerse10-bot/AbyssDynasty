@@ -4,11 +4,19 @@ plugins {
 version = project.mod_version
 group = 'ro.abyssmc'
 base { archivesName = 'abyssdynasty' }
-repositories { mavenCentral(); maven { url = 'https://maven.fabricmc.net/' } }
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+}
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    compileOnly "maven.modrinth:eXts2L7r:lXytLqWj"
 }
 processResources {
     inputs.property 'version', project.version
