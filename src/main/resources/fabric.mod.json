@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"abyssdynasty","version":"${version}","name":"AbyssDynasty","environment":"server","entrypoints":{"main":["ro.abyssmc.abyssdynasty.AbyssDynasty"]},"depends":{"fabricloader":">=0.19.5","minecraft":"26.3","fabric-api":"*"},"mixins":["abyssdynasty.mixins.json"]}
